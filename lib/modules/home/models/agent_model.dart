@@ -1,6 +1,6 @@
 import 'abilities_model.dart';
 import 'role_model.dart';
-import 'voiceLine_model.dart';
+import 'voiceline_model.dart';
 
 class AgentModel {
   String? uuid;
