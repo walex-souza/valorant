@@ -1,11 +1,11 @@
-class MediaList {
+class MediaListModel {
   int? id;
   String? wwise;
   String? wave;
 
-  MediaList({this.id, this.wwise, this.wave});
+  MediaListModel({this.id, this.wwise, this.wave});
 
-  MediaList.fromJson(Map<String, dynamic> json) {
+  MediaListModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     wwise = json['wwise'];
     wave = json['wave'];

@@ -3,7 +3,7 @@ import 'medialist_model.dart';
 class VoiceLine {
   double? minDuration;
   double? maxDuration;
-  List<MediaList>? mediaList;
+  List<MediaListModel>? mediaList;
 
   VoiceLine({this.minDuration, this.maxDuration, this.mediaList});
 
@@ -11,9 +11,9 @@ class VoiceLine {
     minDuration = json['minDuration'];
     maxDuration = json['maxDuration'];
     if (json['mediaList'] != null) {
-      mediaList = <MediaList>[];
+      mediaList = <MediaListModel>[];
       json['mediaList'].forEach((v) {
-        mediaList!.add(MediaList.fromJson(v));
+        mediaList!.add(MediaListModel.fromJson(v));
       });
     }
   }

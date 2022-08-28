@@ -1,12 +1,13 @@
-class Abilities {
+class HabitabilityModel {
   String? slot;
   String? displayName;
   String? description;
   String? displayIcon;
 
-  Abilities({this.slot, this.displayName, this.description, this.displayIcon});
+  HabitabilityModel(
+      {this.slot, this.displayName, this.description, this.displayIcon});
 
-  Abilities.fromJson(Map<String, dynamic> json) {
+  HabitabilityModel.fromJson(Map<String, dynamic> json) {
     slot = json['slot'];
     displayName = json['displayName'];
     description = json['description'];

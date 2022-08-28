@@ -1,4 +1,4 @@
-import 'abilities_model.dart';
+import 'habitability_model.dart';
 import 'role_model.dart';
 import 'voiceline_model.dart';
 
@@ -19,8 +19,8 @@ class AgentModel {
   bool? isPlayableCharacter;
   bool? isAvailableForTest;
   bool? isBaseContent;
-  Role? role;
-  List<Abilities>? abilities;
+  RoleModel? role;
+  List<HabitabilityModel>? abilities;
   VoiceLine? voiceLine;
 
   AgentModel(
@@ -61,11 +61,11 @@ class AgentModel {
     isPlayableCharacter = json['isPlayableCharacter'];
     isAvailableForTest = json['isAvailableForTest'];
     isBaseContent = json['isBaseContent'];
-    role = json['role'] != null ? Role.fromJson(json['role']) : null;
+    role = json['role'] != null ? RoleModel.fromJson(json['role']) : null;
     if (json['abilities'] != null) {
-      abilities = <Abilities>[];
+      abilities = <HabitabilityModel>[];
       json['abilities'].forEach((v) {
-        abilities!.add(Abilities.fromJson(v));
+        abilities!.add(HabitabilityModel.fromJson(v));
       });
     }
     voiceLine = json['voiceLine'] != null
